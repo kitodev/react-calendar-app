@@ -1,0 +1,102 @@
+$body-bg-color: #fff;
+$calendar-bg-color: #dfe4ea;
+$month-bg-color: #1e90ff;
+$month-color: #fff;
+$calendar-box-shadow-color: #ecf0f1; 
+$weekends-bg-color: #70a1ff;
+$weekends-color: #fff;
+$days-hover-bg: #fff;
+$days-color: #fff;
+
+
+.react-calendar {
+    width: 600px;
+    max-width: 100%;
+    background: $calendar-bg-color;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.125em;
+
+    &__month {
+        &-view {
+            &__weekdays {
+                &__weekday {
+                    color: #747d8c;
+                    
+                    abbr {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__tile {
+        &--active {
+            font-weight: 600;
+        }
+            &:enabled {
+                &:hover,
+                &:focus {
+                background-color: $month-bg-color;
+                color: $calendar-bg-color;
+            }
+        }
+    }
+
+    &__navigation {
+        background-color: $month-bg-color;
+        width: 100%;
+        height: 200px;
+        color: $month-color;
+        padding: 0px 30px;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            color: #fff;
+            font-size: 30px;
+
+            &:enabled {
+                &:hover,
+                &:focus {
+                    background-color: rgba(0, 0, 0, 0.2);
+                }
+            }
+        }   
+    
+        &__prev-button,
+        &__next-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 23px;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            transition: all 0.4s;
+        }
+         
+        &__prev2-button,
+        &__next2-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 23px;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            transition: all 0.4s;
+        }
+
+        &__prev-button,
+        &__next-button {
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
